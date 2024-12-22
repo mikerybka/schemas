@@ -5,7 +5,6 @@ import (
 	"io"
 	"net/http"
 	"os"
-	"path/filepath"
 
 	"encoding/json"
 
@@ -51,7 +50,7 @@ func index(w http.ResponseWriter) {
 }
 
 func show(w http.ResponseWriter, r *http.Request) {
-	url := filepath.Join(dataURL, r.URL.Path)
+	url := dataURL + r.URL.Path
 	resp, err := http.Get(url)
 	if err != nil {
 		panic(err)
@@ -88,7 +87,7 @@ func create(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	if res.StatusCode != http.StatusOK {
+	if res.StatusCode != http.StatusCreated {
 		w.WriteHeader(res.StatusCode)
 		_, err = io.Copy(w, res.Body)
 		if err != nil {
@@ -114,7 +113,7 @@ func update(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Write to data store
-	url := filepath.Join(dataURL, r.URL.Path)
+	url := dataURL + r.URL.Path
 	b, err := json.Marshal(s)
 	if err != nil {
 		panic(err)
@@ -128,7 +127,7 @@ func update(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	if res.StatusCode != http.StatusOK {
+	if res.StatusCode != http.StatusCreated {
 		w.WriteHeader(res.StatusCode)
 		_, err = io.Copy(w, res.Body)
 		if err != nil {
