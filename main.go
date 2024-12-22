@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -69,14 +70,11 @@ func create(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Read request body
-	err := json.NewDecoder(r.Body).Decode(&s)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
-		return
-	}
+	json.NewDecoder(r.Body).Decode(&s)
+	// Don't worry about the error. This will allow the body to be empty.
 
 	// Write to data store
-	url := filepath.Join(dataURL, id)
+	url := fmt.Sprintf("%s/%s", dataURL, id)
 	b, err := json.Marshal(s)
 	if err != nil {
 		panic(err)
