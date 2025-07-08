@@ -1,0 +1,12 @@
+{
+  "fields": [
+    {
+      "name": "Owner",
+      "type": "string"
+    },
+    {
+      "name": "Value",
+      "type": "int"
+    }
+  ]
+}

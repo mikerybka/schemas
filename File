@@ -1,0 +1,12 @@
+{
+  "fields": [
+    {
+      "name": "Type",
+      "type": "string"
+    },
+    {
+      "name": "Hash",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "fields": [
+    {
+      "name": "FunctionID",
+      "type": "string"
+    },
+    {
+      "name": "Inputs",
+      "type": "[]Expression"
+    }
+  ]
+}

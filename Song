@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "name": "Title",
+      "type": "string"
+    },
+    {
+      "name": "SpotifyID",
+      "type": "string"
+    },
+    {
+      "name": "YouTubeID",
+      "type": "string"
+    }
+  ]
+}

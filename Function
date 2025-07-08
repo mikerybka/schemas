@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "name": "Inputs",
+      "type": "[]Field"
+    },
+    {
+      "name": "Outputs",
+      "type": "[]Field"
+    },
+    {
+      "name": "Body",
+      "type": "[]Statement"
+    }
+  ]
+}

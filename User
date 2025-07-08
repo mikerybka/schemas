@@ -1,0 +1,12 @@
+{
+  "fields": [
+    {
+      "name": "Email",
+      "type": "string"
+    },
+    {
+      "name": "PasswordHash",
+      "type": "[]byte"
+    }
+  ]
+}

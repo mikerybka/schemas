@@ -1,0 +1,12 @@
+{
+  "fields": [
+    {
+      "name": "Files",
+      "type": "map[string]File"
+    },
+    {
+      "name": "Folders",
+      "type": "map[string]Folder"
+    }
+  ]
+}

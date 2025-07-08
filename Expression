@@ -1,0 +1,28 @@
+{
+  "fields": [
+    {
+      "name": "IsLiteral",
+      "type": "bool"
+    },
+    {
+      "name": "Literal",
+      "type": "Literal"
+    },
+    {
+      "name": "IsCall",
+      "type": "bool"
+    },
+    {
+      "name": "Call",
+      "type": "FunctionCall"
+    },
+    {
+      "name": "IsName",
+      "type": "bool"
+    },
+    {
+      "name": "Name",
+      "type": "string"
+    }
+  ]
+}
